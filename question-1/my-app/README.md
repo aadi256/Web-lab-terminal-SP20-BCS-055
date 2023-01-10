@@ -1,4 +1,4 @@
-# Web-lab-terminal-SP20-BCS-055
+# Getting Started with Create React App
 
 in question-1
 valid users are taken from https://dummyjson.com/users

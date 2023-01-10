@@ -1,0 +1,24 @@
+extends ../layout
+
+block content 
+  .row 
+    .col-sm-8
+      h1=title 
+    .col-sm-4 
+      a(href="/todo/add", class="btn btn-success") Add New Todo
+  table.table 
+    thead 
+      tr 
+        th Name
+        th Content
+        th Status
+    tbody 
+      each todo in todos
+        tr 
+          td=todo.name 
+          td=todo.content 
+          td=todo.status
+          td 
+            a(href='/todo/delete/'+todo._id, class="btn btn-danger" ) Delete 
+          td 
+            a(href='/todo/edit/'+todo._id, class="btn btn-warning" ) Edit

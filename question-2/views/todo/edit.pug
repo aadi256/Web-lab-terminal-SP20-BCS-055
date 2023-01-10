@@ -1,0 +1,15 @@
+extends ../layout
+
+block content 
+  h1 Edit the Product
+  form(action='/todo/edit/'+todo._id,method='post')
+    .form-group 
+      label(for="name") Todo Name 
+      input#name(type='text',class='form-control', name='name', value=todo.name)
+    .form-group  
+      label(for="content") Content 
+      input#content(type='text',class='form-control', name='content', value=todo.content)
+    .form-group  
+      label(for="status") Status 
+      input#status(type='text',class='form-control', name='status', value=todo.status)
+    input(type="submit",class="btn btn-info")  
